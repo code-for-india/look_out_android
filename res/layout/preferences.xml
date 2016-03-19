@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+			android:title="Choose distance unit"> 
+        <ListPreference
+            android:title="Choose the distance unit"
+        	android:summary="Distance will be displayed either in metres/km or in miles!"
+        	android:key="distanceunit"
+        	android:defaultValue="0"
+        	android:entries="@array/UnitEntries"
+        	android:entryValues="@array/UnitValues" />
+    </PreferenceCategory>
+    
+     <PreferenceCategory
+			android:title="Choose distance"> 
+        <ListPreference
+            android:title="Max Distance for categories"
+        	android:summary="Select radial distance within which the places will be shown"
+        	android:key="otherdistance"
+        	android:defaultValue="2000"
+        	android:entries="@array/DistanceEntries"
+        	android:entryValues="@array/DistanceValues" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+			android:title="Choose max number of places"> 
+        <ListPreference
+            android:title="Max places for categories"
+        	android:summary="Select the maximum number of places!"
+        	android:key="othermaxnumplaces"
+        	android:defaultValue="60"
+        	android:entries="@array/MaxNumPlacesEntries"
+        	android:entryValues="@array/MaxNumPlacesValues" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+			android:title="Choose themes"> 
+        <ListPreference
+            android:title="Choose the theme for Camera view"
+        	android:summary="In Camera view, the places will be shown with black text on white background or white text on black background!"
+        	android:key="theme"
+        	android:defaultValue="1"
+        	android:entries="@array/ThemeEntries"
+        	android:entryValues="@array/ThemeValues" />
+    </PreferenceCategory>
+</PreferenceScreen>

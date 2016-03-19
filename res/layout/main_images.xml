@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFFFF"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="10dip"
+        android:weightSum="10" >
+
+        <LinearLayout
+            android:id="@+id/button_view"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="2"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="10dip"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip" >
+
+            <TextView
+                android:id="@+id/main_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="10dip"
+                android:paddingLeft="5dip"
+                android:text="@string/app_name"
+                android:textSize="26sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|right" >
+
+                <!--
+        <Button
+	        android:id="@+id/submit"
+	        android:gravity="center_horizontal|center_vertical"
+	        android:layout_gravity="center_horizontal|center_vertical"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text=" About Us        " />
+	     
+	    <Button
+	        android:id="@+id/settings_button"
+	        android:gravity="center_horizontal|center_vertical"
+	        android:layout_gravity="center_horizontal|center_vertical"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:onClick="buttonClick"
+	        android:clickable="true"
+	        android:tag="submit"
+	        android:text=" Settings        " />
+                -->
+
+
+                <!--
+                     <ImageView
+                    android:id="@+id/help_image"
+                    android:layout_width="67dip"
+                    android:layout_height="67dip"
+                    android:layout_gravity="right|top"
+                    android:clickable="true"
+                    android:gravity="right|top"
+                    android:onClick="imageClick"
+                    android:paddingRight="10dip"
+                    android:src="@drawable/help"
+                    android:tag="help" >
+                </ImageView>
+                -->
+
+                <ImageView
+                    android:id="@+id/settings_image"
+                    android:layout_width="67dip"
+                    android:layout_height="67dip"
+                    android:layout_gravity="right|top"
+                    android:clickable="true"
+                    android:gravity="right|top"
+                    android:onClick="imageClick"
+                    android:paddingRight="10dip"
+                    android:src="@drawable/settings"
+                    android:tag="settings" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/search_image"
+                    android:layout_width="67dip"
+                    android:layout_height="65dip"
+                    android:layout_gravity="right|top"
+                    android:clickable="true"
+                    android:gravity="right|top"
+                    android:onClick="imageClick"
+                    android:paddingRight="10dip"
+                    android:src="@drawable/search"
+                    android:tag="search" >
+                </ImageView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_view"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="8"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="5dip"
+            android:paddingLeft="25dip"
+            android:paddingRight="25dip" >
+
+            <LinearLayout
+                android:id="@+id/button_view"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="imageClick"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:src="@drawable/loo"
+                    android:tag="closeby_loo" >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#FF000000"
+                    android:text="Nearby loos" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/button_view"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="imageClick"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:src="@drawable/review_a_loo"
+                    android:tag="review_a_loo" >
+                </ImageView>
+                <TextView
+                    android:id="@+id/feedback_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#FF000000"
+                    android:text="Feedback" />
+            </LinearLayout>
+            <!--
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="imageClick"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/shopping"
+                android:tag="shopping" >
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="imageClick"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/publictransport"
+                android:tag="publictransport" > 
+            </ImageView>
+            -->
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

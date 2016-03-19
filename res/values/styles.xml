@@ -1,0 +1,20 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+      <color name="transparent_green_color">#8800ff00</color>  
+  <style name="TranslucentGreen" parent="android:Theme.Translucent">
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowNoTitle">false</item>
+    <item name="android:windowIsFloating">false</item>
+    <item name="android:backgroundDimEnabled">true</item>
+  </style>
+
+  <style name="opaque" parent="android:Theme.Translucent">
+    <item name="android:windowIsTranslucent">false</item>
+    <item name="android:windowNoTitle">false</item>
+    <item name="android:windowIsFloating">false</item>
+    <item name="android:backgroundDimEnabled">true</item>
+  </style>
+</resources>

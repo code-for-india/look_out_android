@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff5e5f60"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip"
+    android:paddingTop="5dip" >
+
+    <LinearLayout
+        android:id="@+id/sub_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff5e5f60"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/list_view_icon"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:src="@drawable/loo" />
+
+        <TextView
+            android:id="@+id/list_view_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="false"
+            android:text="Food"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout03"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_above="@+id/RelativeLayout04"
+        android:layout_below="@+id/RelativeLayout02"
+        android:layout_weight="1"
+        android:background="#ff5e5f60" >
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ff5e5f60" >
+        </ListView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="#00000000"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+-------------
+Release
+-------------
+2. Upload images for 10 inch tablets
+3. Show direction to destination (http://stackoverflow.com/questions/11745314/why-retrieving-google-directions-for-android-using-kml-data-is-not-working-anymo/11745316#11745316)
+4. Upon clicking of map open in separate map
+5. Bug - the direction image in details view is not proper sometimes
+
+
+1. How to use screen. check LoReMo for example.
+3. Add search option
+4. Paid app
+15. Add "map" icon, "direction" icon and "call" icons to details view
+20. Add favorites icon. Users favorite options will be available in one place
+21. In the summary circle, change the color of the dots depending on the category
+19. 'Add reviews' in details section 
+10. Integrate this library code directly - http://code.google.com/p/little-fluffy-location-library/
+7. straight boxes
+8. Show size of items in lens view based on their distance
+9. Save details obtained in details view so that orientation change need not reload everything
+11. Display '+' when crowded
+12. Screenshot of the whole view
+13. Check if Street view can be added
+16. Show ratings in the map view upon tapping
+17. Add opening hours details
+22. Add tips based on usage statistics
+
+Tablet
+------
+
+1. Enable for 10 inch tablet
+2. Add screenshot for 10 inch tablet
+3. Make the rect width and rect text height work for tablets
+
+-------------
+Places
+--------------
+https://developers.google.com/places/documentation/search#PlaceSearchResults
+
+Nearby search for Food
+
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.91992,77.575549&radius=600&types=food&sensor=false&key=AIzaSyAhUBlENcftb_QsdGBSQlTJuw9eIUdTZck
+
+https://maps.googleapis.com/maps/api/place/textsearch/xml?query=adigas&sensor=true&key=AIzaSyAhUBlENcftb_QsdGBSQlTJuw9eIUdTZck
+
+------------
+Latitude
+------------
+Using the new Sender ID/ API Key
+
+keytool -list -alias androiddebugkey -keystore C:\Users\skaranth\.android\debug.keystore -storepass android -keypass android
+72:BD:30:41:86:43:70:79:84:32:1C:E5:D7:DE:3E:43:08:0C:C5:DE
+
+keytool -list -alias "awesome apps inc" -keystore C:\Users\skaranth\workspace\street_lens\keystore -storepass sjcesjce -keypass sjcesjce
+
+Certificate fingerprint (SHA1): 41:9B:CF:3D:D1:94:64:01:8C:9F:A7:1E:FA:6D:8C:B7:10:2A:7D:56
+
+https://www.googleapis.com/latitude/v1/currentLocation?key=AIzaSyA998X5AFH7cDruAov4YohN46jJDB7UmaI&granularity=best
+
+-------------
+Place Photos
+-------------
+
+https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CnRmAAAA_UF5OWW_euJI-GXp3tTlbmp9lyQegC9O21CC4X8jLOr0ueQeRLcBWnqB3UIhb-0wrRlGWedfxOoEuY5mM54xcKYlf1GUW-EsIV00LKLs20CbtAvIYPcKSqsiFnslNpUes1uiizYOkawnB8X69rl6zxIQYLsRKQ45FEwqJzVCBSiiiBoUE9uIN43zaDULlPe0EshGq3CJoxw&sensor=false&key=AIzaSyAhUBlENcftb_QsdGBSQlTJuw9eIUdTZck
+
+-------------
+Place Details
+--------------
+https://developers.google.com/places/documentation/details#PlaceDetailsRequests
+
+Place Details for Adiga's
+
+https://maps.googleapis.com/maps/api/place/details/json?reference=CnRkAAAAl3Oo48-0zNXXCiPSCbHffJOc8_Ha2Z_ofVgOYXtUt_iAeS_3e0ImfYJgIGabjQNHyFvA1ucnmC3nLrG42Dr7u5OP24jbrPBEewseEzIwteO7ho_Wgox_F-hksoLSTYkEOVUtMe3eS4kxecgd9odQJxIQXu4yMuVIIrkrzXycaK4r5RoU8vObSquU_6cG3Qxpcjy-F-iokTA
+&sensor=true&key=AIzaSyAhUBlENcftb_QsdGBSQlTJuw9eIUdTZck
+
+
+
+
+https://maps.googleapis.com/maps/api/place/details/json?reference=CoQBcgAAAKyTyYpF79guCKWdajJwnh0VXC6vIMNE2oLz8_ulDArqdLOfNd1gMSv-ppiVU64iRFF07qMLOFgbycxECbT5otKeV5NWc2iym9T19ynURTeNJvS0dHmBrGUkWRhoYSnaYJXBmHJpgEmt8fKTawRqz1jAxu2KvyZVojIVpl5b48LDEhCZSMIbg4ywQ7TutIpxQAqYGhRNOCDty48wx7fdOsi5895NnEmX7g
+&sensor=true&key=AIzaSyAhUBlENcftb_QsdGBSQlTJuw9eIUdTZck
+
+-------------
+Photos
+--------------
+Adigas photo ref
+CnRmAAAA7PW-XMj7z1PShwJt-vjx6BlQOpmYORNWwP5ziOl4WIfNaZMmuEKzaIDecVo4NbPs8wJc5XKut5mZJnnc-RX2vnALqW8up8adbiwkcQSDCNa9zRmWfZ3W-OjA4J77YwLT8rxr8LNM0oONIL6ofOMIkBIQZkjmsOdVJS_sq40dX-EESBoUpTVK75ktcdUw0cuZxvMNM1c10hw
+
+https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CnRmAAAA7PW-XMj7z1PShwJt-vjx6BlQOpmYORNWwP5ziOl4WIfNaZMmuEKzaIDecVo4NbPs8wJc5XKut5mZJnnc-RX2vnALqW8up8adbiwkcQSDCNa9zRmWfZ3W-OjA4J77YwLT8rxr8LNM0oONIL6ofOMIkBIQZkjmsOdVJS_sq40dX-EESBoUpTVK75ktcdUw0cuZxvMNM1c10hw&sensor=false&key=AIzaSyAhUBlENcftb_QsdGBSQlTJuw9eIUdTZck

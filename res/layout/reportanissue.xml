@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffffff"
+        android:orientation="vertical"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingBottom="60dip"
+        android:paddingTop="5dip" >
+
+        <ScrollView
+            android:id="@+id/day_scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffffff"
+            android:orientation="vertical"
+            android:paddingTop="5dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#ffffffff"
+                android:orientation="vertical"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:paddingTop="5dip" >
+
+                <LinearLayout
+                    android:id="@+id/button_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff132358"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:id="@+id/details_main_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:paddingBottom="10dip"
+                        android:text="Report an Issue"
+                        android:textColor="#FFDDDDDD"
+                        android:textSize="20dip"
+                        android:textStyle="bold" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/details_details_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dip"
+                    android:paddingRight="20dip"
+                    android:paddingTop="5dip" >
+
+                    <!-- Call Details -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:orientation="horizontal"
+                        android:weightSum="3" >
+
+                        <TextView
+                            android:id="@+id/details_phone_label"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center"
+                            android:layout_weight="1"
+                            android:gravity="right|center"
+                            android:paddingLeft="5dip"
+                            android:paddingTop="5dip"
+                            android:text="Loo :"
+                            android:textColor="#FF000000"
+                            android:textSize="12dip"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:layout_weight="2" 
+                        android:gravity="left|center"
+                        android:orientation="horizontal">
+	                        <Spinner
+	                            android:id="@+id/loo_spinner"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"/>
+	                        <ImageView
+	                            android:id="@+id/search_image"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:src="@android:drawable/ic_menu_search"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Types of place -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:orientation="horizontal"
+                        android:weightSum="3" >
+
+                        <TextView
+                            android:id="@+id/details_types_label"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center"
+                            android:layout_weight="1"
+                            android:gravity="right|center"
+                            android:paddingLeft="5dip"
+                            android:paddingTop="5dip"
+                            android:text="Name :"
+                            android:textColor="#FF000000"
+                            android:textSize="12dip"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/name_string"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:singleLine="true"
+                            android:hint="Enter your name"
+                            android:text="Shradha"
+                            android:textColor="#FF000000" />
+                    </LinearLayout>
+
+                    <!-- Distance from current location -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:orientation="horizontal"
+                        android:weightSum="3" >
+
+                        <TextView
+                            android:id="@+id/details_distance_label"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center"
+                            android:layout_weight="1"
+                            android:gravity="right|center"
+                            android:paddingLeft="5dip"
+                            android:paddingTop="5dip"
+                            android:text="Gender :"
+                            android:textColor="#FF000000"
+                            android:textSize="12dip"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="horizontal" >
+
+                            <RadioGroup
+                                android:id="@+id/gender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <RadioButton
+                                    android:id="@+id/radioMale"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="male"
+                                    android:onClick="onButtonClick"
+                                    android:tag="male"
+                                    android:textColor="#FF000000" />
+
+                                <RadioButton
+                                    android:id="@+id/radioFemale"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="female"
+                                    android:onClick="onButtonClick"
+                                    android:tag="female"
+                                    android:textColor="#FF000000" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- URL Details -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:orientation="horizontal"
+                        android:weightSum="3" >
+
+                        <TextView
+                            android:id="@+id/details_url_label"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center"
+                            android:layout_weight="1"
+                            android:gravity="right|center"
+                            android:paddingLeft="5dip"
+                            android:paddingTop="5dip"
+                            android:text="Issue Type :"
+                            android:textColor="#FF000000"
+                            android:textSize="12dip"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <Spinner
+                            android:id="@+id/issue_type_spinner"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center"
+                            android:layout_weight="2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:orientation="horizontal"
+                        android:weightSum="3" >
+
+                        <TextView
+                            android:id="@+id/details_url_label"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center"
+                            android:layout_weight="1"
+                            android:gravity="right|center"
+                            android:paddingLeft="5dip"
+                            android:paddingTop="5dip"
+                            android:text="Comments :"
+                            android:textColor="#FF000000"
+                            android:textSize="12dip"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/comment_string"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:singleLine="false"
+                            android:text=""
+                            android:hint="Please provide more details"
+                            android:textColor="#FF000000" />
+                    </LinearLayout>
+                    
+                        <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:orientation="horizontal"
+                        android:weightSum="3" >
+
+                        <TextView
+                            android:id="@+id/details_url_label"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center"
+                            android:layout_weight="1"
+                            android:gravity="right|center"
+                            android:paddingLeft="5dip"
+                            android:paddingTop="5dip"
+                            android:text="Add image :"
+                            android:textColor="#FF000000"
+                            android:textSize="12dip"
+                            android:textStyle="bold" >
+                        </TextView>
+                        
+                        <LinearLayout
+                        	android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2">
+	                        <ImageView
+	                            android:id="@+id/image_picker"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:src="@android:drawable/ic_menu_camera"
+	                            android:tag="image_picker"
+	                            android:onClick="onButtonClick"
+	                            android:layout_gravity="left|center"
+	                            android:gravity="left|center"
+	                            android:textColor="#FF000000" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="#00000000"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <Button
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onButtonClick"
+            android:tag="cancel"
+            android:text="Cancel" />
+
+        <Button
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onButtonClick"
+			android:tag="submit"
+            android:text="Submit Issue" />
+    </LinearLayout>
+
+</RelativeLayout>

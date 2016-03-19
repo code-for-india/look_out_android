@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffffff"
+        android:orientation="vertical"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="5dip" >
+
+        <ScrollView
+            android:id="@+id/day_scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffffff"
+            android:orientation="vertical"
+            android:paddingTop="5dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#ffffffff"
+                android:orientation="vertical"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:paddingTop="5dip" >
+
+                <LinearLayout
+                    android:id="@+id/button_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff132358"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:id="@+id/details_main_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:paddingBottom="10dip"
+                        android:text=""
+                        android:textColor="#FFDDDDDD"
+                        android:textSize="20dip"
+                        android:textStyle="bold" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/button_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffffff"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:paddingTop="5dip" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/primary_action_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:nextFocusLeft="@+id/quick_contact_photo"
+                    android:nextFocusRight="@+id/secondary_action_icon"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/call_log_inner_margin"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/call_log_inner_margin"
+                        android:paddingTop="@dimen/call_log_inner_margin" >
+
+                        <TextView
+                            android:id="@+id/details_place_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="false"
+                            android:text=""
+                            android:textColor="#FF333333"
+                            android:textSize="14dip" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/location_tilt_icon"
+                            android:layout_width="@dimen/call_log_call_action_width"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:onClick="imageClick"
+                            android:paddingBottom="@dimen/call_log_inner_margin"
+                            android:paddingRight="@dimen/call_log_inner_margin"
+                            android:paddingTop="@dimen/call_log_inner_margin"
+                            android:scaleType="center"
+                            android:src="@drawable/direction_details"
+                            android:tag="getdirections" />
+
+                        <ImageView
+                            android:id="@+id/details_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center_vertical|center_horizontal" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/map_fragment_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingTop="15dip" >
+
+                    <ImageView
+                        android:id="@+id/details_places_pic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="ClickOnDetails"
+                        android:tag="pic" />
+
+                    <FrameLayout
+                        android:id="@+id/relativeLayout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp" >
+
+                        <fragment
+                            android:id="@+id/map"
+                            android:layout_width="fill_parent"
+                            android:layout_height="150dip"
+                            class="com.google.android.gms.maps.SupportMapFragment" />
+
+                        <View
+                            android:id="@+id/imageView123"
+                            android:layout_width="fill_parent"
+                            android:layout_height="150dip"
+                            android:background="@android:color/transparent" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:gravity="center_vertical|left"
+                    android:orientation="vertical"
+                    android:paddingTop="10dip" >
+
+                    <Button
+                        android:id="@+id/getdirections_icon"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/button_text"
+                        android:clickable="true"
+                        android:onClick="imageClick"
+                        android:scaleType="center"
+                        android:tag="getdirections"
+                        android:text="Get Directions" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/details_details_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:id="@+id/details_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left|center_horizontal"
+                        android:paddingLeft="5dip"
+                        android:paddingTop="5dip"
+                        android:text="Details"
+                        android:textColor="#FFAA0000"
+                        android:textSize="14dip"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="#ffAA0000"
+                        android:paddingLeft="15dip"
+                        android:paddingRight="15dip" />
+
+                    <!-- Opening Hours -->
+         			   	 <LinearLayout
+							  android:layout_width="wrap_content"
+							  android:layout_height="wrap_content"
+							  android:gravity="left|top"
+							  android:orientation="horizontal">
+					     <TextView
+					            android:id="@+id/opening_hours_label"
+							 	android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="left|top"
+					            android:gravity="left|top"
+					            android:text="Opening hours: "
+					            android:paddingTop="5dip"
+					            android:paddingLeft="5dip"
+					            android:textColor="#FF000000"
+					            android:textStyle="bold"
+					            android:textSize="12dip">
+			       		</TextView>
+			       		<TextView
+					            android:id="@+id/opening_hours_string"
+							 	android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="left|top"
+					            android:gravity="left|top"
+					            android:text="24 hrs"
+					            android:textColor="#FF000000"
+					            android:singleLine="false"
+					            android:textSize="12dip">
+			       		</TextView>
+				   	</LinearLayout>
+				   	
+
+					<!-- Loo Type - Indian/Western -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|top"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/loo_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|top"
+                            android:gravity="left|top"
+                            android:paddingLeft="5dip"
+                            android:paddingTop="5dip"
+                            android:text="Type: "
+                            android:textColor="#FF000000"
+                            android:textSize="12dip"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/loo_type_string"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|top"
+                            android:autoLink="phone"
+                            android:gravity="left|top"
+                            android:text="Western"
+                            android:textColor="#FF000000"
+                            android:textSize="12dip" >
+                        </TextView>
+                    </LinearLayout>
+         			   	 
+                    <!-- Urinals count -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|top"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/urinals_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|top"
+                            android:gravity="left|top"
+                            android:paddingLeft="5dip"
+                            android:paddingTop="5dip"
+                            android:text="Urinals Count: "
+                            android:textColor="#FF000000"
+                            android:textSize="12dip"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/urinals_count_string"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|top"
+                            android:autoLink="phone"
+                            android:gravity="left|top"
+                            android:text="5"
+                            android:textColor="#FF000000"
+                            android:textSize="12dip" >
+                        </TextView>
+                    </LinearLayout>
+                    
+                    <!-- Free/Paid -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|top"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/free_paid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|top"
+                            android:gravity="left|top"
+                            android:paddingLeft="5dip"
+                            android:paddingTop="5dip"
+                            android:text="Free/Paid: "
+                            android:textColor="#FF000000"
+                            android:textSize="12dip"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/free_paid_string"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|top"
+                            android:autoLink="phone"
+                            android:gravity="left|top"
+                            android:text="free"
+                            android:textColor="#FF000000"
+                            android:textSize="12dip" >
+                        </TextView>
+                    </LinearLayout>
+                    
+                    <!-- Call Details -->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|top"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/details_phone_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|top"
+                            android:gravity="left|top"
+                            android:paddingLeft="5dip"
+                            android:paddingTop="5dip"
+                            android:text="Phone: "
+                            android:textColor="#FF000000"
+                            android:textSize="12dip"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/details_phone_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|top"
+                            android:autoLink="phone"
+                            android:gravity="left|top"
+                            android:text=""
+                            android:textColor="#FF000000"
+                            android:textSize="12dip" >
+                        </TextView>
+                    </LinearLayout>
+                    
+                    <!-- Last cleaned -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|top"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/details_phone_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|top"
+                            android:gravity="left|top"
+                            android:paddingLeft="5dip"
+                            android:paddingTop="5dip"
+                            android:text="Last Serviced: "
+                            android:textColor="#FF000000"
+                            android:textSize="12dip"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/last_serviced"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|top"
+                            android:autoLink="phone"
+                            android:gravity="left|top"
+                            android:text="5 hours ago"
+                            android:textColor="#FF000000"
+                            android:textSize="12dip" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <!-- Last cleaned -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|top"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/details_phone_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|top"
+                            android:gravity="left|top"
+                            android:paddingLeft="5dip"
+                            android:paddingTop="5dip"
+                            android:text="Support for Handicaps: "
+                            android:textColor="#FF000000"
+                            android:textSize="12dip"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/support_for_handicap_string"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|top"
+                            android:autoLink="phone"
+                            android:gravity="left|top"
+                            android:text="5 hours ago"
+                            android:textColor="#FF000000"
+                            android:textSize="12dip" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <!-- Distance from current location -->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|top"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/details_distance_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|top"
+                            android:gravity="left|top"
+                            android:paddingLeft="5dip"
+                            android:paddingTop="5dip"
+                            android:text="Distance: "
+                            android:textColor="#FF000000"
+                            android:textSize="12dip"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/details_distance_string"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|top"
+                            android:gravity="left|top"
+                            android:singleLine="false"
+                            android:text=""
+                            android:textColor="#FF000000"
+                            android:textSize="12dip" >
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Reviews -->
+
+                <LinearLayout
+                    android:id="@+id/details_review_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:id="@+id/details_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left|center_horizontal"
+                        android:paddingLeft="5dip"
+                        android:text="Report an Issue"
+                        android:textColor="#FFAA0000"
+                        android:textSize="14dip"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3dip"
+                        android:background="#ffAA0000"
+                        android:paddingLeft="15dip"
+                        android:paddingRight="15dip" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/details_review_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                	<Button 
+                	    android:layout_width="fill_parent"
+	                	android:layout_height="wrap_content"
+	                	android:onClick="onButtonClick"
+	                	android:tag="report_an_issue"
+	                	android:text="Report an issue"/>
+                	
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>
